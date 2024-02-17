@@ -16,7 +16,7 @@ function getAdvice() {
         .then(adviceData => {
             const AdviceId = adviceData.slip.id;
             const Adviceobj = adviceData.slip.advice;
-            qouteDiv.innerHTML = `<h4>ADVICE # ${AdviceId}</h4>`;
+            qouteDiv.innerHTML = `<h1>ADVICE # ${AdviceId}</h1>`;
             qouteDiv.innerHTML += `<p>“ ${Adviceobj}”</p>`;
         })
         .catch(error => {
