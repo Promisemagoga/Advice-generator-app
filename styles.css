@@ -87,13 +87,7 @@ p{
         width: 200px;
     }
 
-    #dynamicImage {
-        display: none; /* Hide the original image for smaller screens */
-    }
-
-    #dynamicImageSmall {
-        display: block; /* Show the small image for smaller screens */
-    }
+   
 
     .attribution{
         width: 200px;

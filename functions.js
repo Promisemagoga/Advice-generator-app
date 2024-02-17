@@ -1,12 +1,11 @@
-const resDiv = document.getElementById('results');
-const resBtn = document.getElementById('getAdvice');
+const qouteDiv = document.getElementById('results');
+const generateQuoteBtn = document.getElementById('getAdvice');
 
-resBtn.addEventListener('click', () => {
-    getAdvice();
-});
+generateQuoteBtn.addEventListener('click', getAdvice);
 
 window.onload = () => {
     getAdvice();
+    resizeWindow();
 };
 
 function getAdvice() {
@@ -17,23 +16,22 @@ function getAdvice() {
         .then(adviceData => {
             const AdviceId = adviceData.slip.id;
             const Adviceobj = adviceData.slip.advice;
-            resDiv.innerHTML = `<h4>ADVICE # ${AdviceId}</h4>`;
-            resDiv.innerHTML += `<p>“ ${Adviceobj}”</p>`;
+            qouteDiv.innerHTML = `<h4>ADVICE # ${AdviceId}</h4>`;
+            qouteDiv.innerHTML += `<p>“ ${Adviceobj}”</p>`;
         })
         .catch(error => {
             console.log(error);
         });
 }
 
+window.addEventListener('resize', resizeWindow);
 
-// script.js
-window.addEventListener('resize', function () {
-    if (window.innerWidth <= 768) {
-        document.getElementById('dynamicImage').style.display = 'none'; // Hide the original image
-        document.getElementById('dynamicImageSmall').style.display = 'block'; // Show the small image
+function resizeWindow() {
+    if (window.innerWidth <= 767) {
+        document.getElementById('ImageDividerBigScreen').style.display = 'none';
+        document.getElementById('ImageDividerSmallScreen').style.display = 'block';
     } else {
-        document.getElementById('dynamicImage').style.display = 'block'; // Show the original image
-        document.getElementById('dynamicImageSmall').style.display = 'none'; // Hide the small image
+        document.getElementById('ImageDividerBigScreen').style.display = 'block';
+        document.getElementById('ImageDividerSmallScreen').style.display = 'none';
     }
-});
-
+}
