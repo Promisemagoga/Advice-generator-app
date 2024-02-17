@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color:  hsl(218, 23%, 16%);
+
+    height: 100vh;
+    font-family: "Manrope", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(217, 19%, 24%);
+
+    backdrop-filter: blur(10px);
+    width: 350px;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.diceBtnContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 100%;
+    position: relative;
+    top: 20px;
+    border: none;
+    margin-top: auto;
+}
+
+#results{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    color: hsl(193, 38%, 86%);
+}
+
+.divider{
+    margin-top: 20px;
+    width: 250px;
+}
+
+h4{
+    color: hsl(150, 100%, 66%);
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+p{
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+
+@media screen and (max-width:767px){
+    main{
+
+        width: 250px;
+    }
+
+    #results{
+        width: 200px;
+    }
+
+    .divider{
+        width: 200px;
+    }
+
+    #dynamicImage {
+        display: none; /* Hide the original image for smaller screens */
+    }
+
+    #dynamicImageSmall {
+        display: block; /* Show the small image for smaller screens */
+    }
+
+    .attribution{
+        width: 200px;
+    }
+}
