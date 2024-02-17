@@ -4,8 +4,8 @@ const generateQuoteBtn = document.getElementById('getAdvice');
 generateQuoteBtn.addEventListener('click', getAdvice);
 
 window.onload = () => {
-    getAdvice();
     resizeWindow();
+    getAdvice();
 };
 
 function getAdvice() {
